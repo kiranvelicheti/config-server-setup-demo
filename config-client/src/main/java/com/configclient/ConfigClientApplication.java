@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigClientApplication {
 
-	@Value("${testing}")
+	@Value("${demovariable}")
 	private String demovariable;
 
 	public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class ConfigClientApplication {
 
 	@GetMapping(value = "/demo")
 	public String whoami() {
-		return String.format("Hello %s! Your demo variable is.\n", demovariable);
+		return String.format("Hello welcome to %s!\n", demovariable);
 	}
 
 }
